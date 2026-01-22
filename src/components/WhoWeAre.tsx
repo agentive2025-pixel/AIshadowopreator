@@ -118,7 +118,7 @@ export default function WhoWeAre() {
                 className="glass-card rounded-2xl p-8 space-y-4"
               >
                 {[
-                  { label: 'Avg. Monthly Income', value: '$800+' },
+                  { label: 'Avg. Monthly Income', value: '$2000+' },
                   { label: 'Setup Time', value: '2-4 weeks' },
                   { label: 'Client Satisfaction', value: '4.9/5' },
                 ].map((item, index) => (
