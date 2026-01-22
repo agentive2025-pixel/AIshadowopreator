@@ -6,6 +6,7 @@ import Process from './components/Process';
 import Services from './components/Services';
 import Benefits from './components/Benefits';
 import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -31,6 +32,7 @@ function App() {
         <div id="testimonials">
           <Testimonials />
         </div>
+        <FAQ />
         <CTA />
       </main>
 
