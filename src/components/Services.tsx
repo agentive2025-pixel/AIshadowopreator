@@ -10,49 +10,49 @@ export default function Services() {
   const services = [
     {
       icon: Eye,
-      title: 'Shadow Operating',
-      description: 'Complete behind-the-scenes business management',
+      title: 'AI Automation Setup',
+      description: 'We set up smart tools that work for you 24/7',
       features: [
-        'Product development',
-        'Operations management',
-        'Customer support',
-        'Tech infrastructure',
+        'Automated workflows',
+        'Client management systems',
+        'Email automation',
+        'Simple dashboards',
       ],
       gradient: 'from-primary via-purple-600 to-pink-600',
     },
     {
       icon: MessageSquare,
-      title: 'Content Strategy',
-      description: 'High-converting content tailored to your audience',
+      title: 'Business Foundation',
+      description: 'Get started the right way with expert guidance',
       features: [
-        'Content planning',
-        'Copywriting',
-        'Brand positioning',
-        'Engagement optimization',
+        'Niche identification',
+        'Offer creation',
+        'Pricing guidance',
+        'Marketing basics',
       ],
       gradient: 'from-secondary via-blue-500 to-cyan-500',
     },
     {
       icon: DollarSign,
-      title: 'Audience Monetization',
-      description: 'Turn followers into paying customers',
+      title: 'Income Streams',
+      description: 'Build multiple ways to earn from your skills',
       features: [
-        'Product creation',
-        'Pricing strategy',
-        'Sales funnels',
-        'Payment systems',
+        'Service packages',
+        'Digital products',
+        'Consulting setup',
+        'Payment processing',
       ],
       gradient: 'from-green-500 via-emerald-500 to-teal-500',
     },
     {
       icon: BarChart3,
-      title: 'Growth Analytics',
-      description: 'Data-driven insights that maximize revenue',
+      title: 'Growth Support',
+      description: 'Ongoing help to scale your earnings steadily',
       features: [
-        'Performance tracking',
-        'Revenue optimization',
-        'Market analysis',
-        'Growth forecasting',
+        'Simple analytics',
+        'Monthly strategy calls',
+        'Performance tips',
+        'Community access',
       ],
       gradient: 'from-orange-500 via-red-500 to-pink-500',
     },
@@ -68,10 +68,10 @@ export default function Services() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Smart services, measurable results
+            Simple services, real results
           </h2>
           <p className="text-xl text-lightGray max-w-2xl mx-auto">
-            Everything you need to build a thriving creator business
+            Everything you need to start earning from your skills—designed for beginners
           </p>
         </motion.div>
 

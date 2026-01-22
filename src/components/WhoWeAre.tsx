@@ -18,7 +18,7 @@ export default function WhoWeAre() {
         >
           <div className="inline-block mb-6">
             <span className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-primary font-semibold text-sm">
-              Trusted by 200+ Creators
+              Helping Beginners Succeed
             </span>
           </div>
 
@@ -27,7 +27,7 @@ export default function WhoWeAre() {
           </h2>
 
           <p className="text-xl text-lightGray max-w-3xl mx-auto">
-            We help creators monetize their audience quietly and efficiently — while we handle everything behind the scenes
+            We're your partner in turning skills into income. Our AI-powered automation helps beginners and small creators build profitable online businesses—without the complexity
           </p>
         </motion.div>
 
@@ -35,23 +35,23 @@ export default function WhoWeAre() {
           {[
             {
               icon: Users,
-              value: '200+',
-              label: 'Clients',
-              description: 'Creators trust us with their business',
+              value: '150+',
+              label: 'Clients Helped',
+              description: 'Beginners and small businesses we\'ve supported',
               color: 'text-primary',
             },
             {
               icon: TrendingUp,
-              value: '$38M+',
+              value: '$1.2M+',
               label: 'Generated',
-              description: 'Revenue created for our clients',
+              description: 'Combined income created for our clients',
               color: 'text-secondary',
             },
             {
               icon: Shield,
-              value: '15+',
-              label: 'Team Members',
-              description: 'Experts working for your success',
+              value: '98%',
+              label: 'Success Rate',
+              description: 'Clients who achieve their income goals',
               color: 'text-primary',
             },
           ].map((stat, index) => (
@@ -98,10 +98,10 @@ export default function WhoWeAre() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-white mb-6">
-                Built for Creators, Run by Operators
+                Built for Beginners, Powered by AI
               </h3>
               <p className="text-lightGray text-lg leading-relaxed">
-                We're a team of business operators, marketers, and developers who specialize in turning creator influence into sustainable revenue streams. While you focus on creating content, we build and manage the entire business infrastructure.
+                We're a team passionate about making online business accessible to everyone. Using smart automation and AI tools, we help you start earning from your skills—even if you're just starting out. No experience needed, we'll guide you every step of the way.
               </p>
             </div>
 
@@ -118,9 +118,9 @@ export default function WhoWeAre() {
                 className="glass-card rounded-2xl p-8 space-y-4"
               >
                 {[
-                  { label: 'Success Rate', value: '98%' },
-                  { label: 'Avg. Growth', value: '340%' },
-                  { label: 'Client Retention', value: '94%' },
+                  { label: 'Avg. Monthly Income', value: '$800+' },
+                  { label: 'Setup Time', value: '2-4 weeks' },
+                  { label: 'Client Satisfaction', value: '4.9/5' },
                 ].map((item, index) => (
                   <div key={index} className="flex justify-between items-center">
                     <span className="text-lightGray">{item.label}</span>

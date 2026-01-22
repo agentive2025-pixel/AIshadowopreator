@@ -10,37 +10,37 @@ export default function Benefits() {
   const benefits = [
     {
       icon: Zap,
-      title: 'Effortless Monetization',
-      description: 'We handle product creation, pricing, payments, and marketing',
+      title: 'Beginner-Friendly',
+      description: 'No tech skills or business experience needed—we guide you',
       details: [
-        'Zero operational overhead',
-        'Automated systems',
-        'Professional execution',
-        'Continuous optimization',
+        'Step-by-step tutorials',
+        'Simple tools & systems',
+        'Friendly support team',
+        'Learn as you earn',
       ],
       gradient: 'from-yellow-500 to-orange-500',
     },
     {
       icon: Target,
-      title: 'Proven Growth Strategies',
-      description: 'Fully optimized launch plans that maximize sales',
+      title: 'Fast Results',
+      description: 'Get your first client within 2-4 weeks with our proven system',
       details: [
-        'Data-driven decisions',
-        'Tested frameworks',
-        'Market-validated approach',
-        'Rapid iteration',
+        'Quick setup process',
+        'Tested strategies',
+        'Clear action steps',
+        'Real income fast',
       ],
       gradient: 'from-primary to-pink-600',
     },
     {
       icon: Handshake,
-      title: 'Shared Success',
-      description: 'We only succeed when you do—percentage-based profit sharing',
+      title: 'Affordable Pricing',
+      description: 'Start for as low as $97/month—cancel anytime',
       details: [
-        'Aligned incentives',
-        'No upfront costs',
-        'Performance-based',
-        'Long-term partnership',
+        'No hidden fees',
+        'Flexible plans',
+        'Money-back guarantee',
+        'Pay as you grow',
       ],
       gradient: 'from-secondary to-blue-600',
     },
@@ -56,10 +56,10 @@ export default function Benefits() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Maximize efficiency and impact
+            Why beginners love working with us
           </h2>
           <p className="text-xl text-lightGray max-w-2xl mx-auto">
-            Focus on what you do best while we handle the rest
+            We make starting your online business simple, supportive, and stress-free
           </p>
         </motion.div>
 
@@ -199,17 +199,17 @@ export default function Benefits() {
           className="mt-20 glass-card rounded-3xl p-12 max-w-4xl mx-auto text-center"
         >
           <h3 className="text-3xl font-bold text-white mb-4">
-            Your Success Is Our Business Model
+            Start Earning in Weeks, Not Months
           </h3>
           <p className="text-lightGray text-lg mb-8">
-            We take a percentage of revenue generated, ensuring our goals are perfectly aligned with yours. No revenue? No fee.
+            Join 150+ beginners who've built sustainable income streams with our simple, proven system. Your success is our priority.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 bg-gradient-to-r from-primary to-pink-600 text-white rounded-lg font-semibold shadow-glow-purple hover:shadow-glow-purple transition-all duration-300"
           >
-            See Pricing Structure
+            View Our Plans
           </motion.button>
         </motion.div>
       </div>

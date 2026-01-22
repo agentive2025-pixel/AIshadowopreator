@@ -88,7 +88,7 @@ export default function Hero() {
             transition={{ delay: 2.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-lightGray mb-12 max-w-3xl mx-auto"
           >
-            We build and manage complete digital product ecosystems for creators—so you can focus on your content while we handle the business
+            Turn your skills into steady income with AI automation. We help beginners and small creators build sustainable online businesses—no tech skills required
           </motion.p>
 
           <motion.div
@@ -123,9 +123,9 @@ export default function Hero() {
             className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
           >
             {[
-              { value: '200+', label: 'Creators' },
-              { value: '$38M+', label: 'Generated' },
-              { value: '15+', label: 'Team Members' },
+              { value: '150+', label: 'Clients Served' },
+              { value: '$1.2M+', label: 'Revenue Generated' },
+              { value: '98%', label: 'Success Rate' },
             ].map((stat, index) => (
               <motion.div
                 key={index}

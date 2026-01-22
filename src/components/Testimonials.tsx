@@ -10,39 +10,36 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Fitness Creator',
-      content: 'AI Operator transformed my content into a $500K/year business. They handled everything while I focused on creating. Best decision I ever made.',
+      name: 'Sarah Martinez',
+      role: 'Virtual Assistant',
+      content: 'I went from $0 to $1,200/month in just 3 months! The automation tools they set up help me manage 5 clients without feeling overwhelmed. Finally making real money doing what I love.',
       rating: 5,
-      revenue: '+$500K',
+      revenue: '$1.2K/mo',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah',
     },
     {
-      name: 'Marcus Chen',
-      role: 'Tech Influencer',
-      content: 'From idea to launch in 5 weeks. The team built my entire digital product ecosystem and it just works. Revenue has been growing every month.',
+      name: 'Michael Chen',
+      role: 'Graphic Designer',
+      content: 'As a complete beginner, I was nervous about starting my own business. AI Operator made it so simple—I got my first paying client within 2 weeks and now consistently earn $800-1000/month.',
       rating: 5,
-      revenue: '+$280K',
+      revenue: '$900/mo',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Michael',
     },
     {
       name: 'Emily Rodriguez',
-      role: 'Lifestyle Blogger',
-      content: 'I was skeptical about outsourcing my business operations, but AI Operator proved me wrong. They understand creators and execute flawlessly.',
+      role: 'Social Media Manager',
+      content: 'The step-by-step guidance was exactly what I needed. I started with zero experience and now have 3 regular clients paying me $500 each. The automation saves me hours every week!',
       rating: 5,
-      revenue: '+$350K',
+      revenue: '$1.5K/mo',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Emily',
     },
     {
-      name: 'David Park',
-      role: 'Business Coach',
-      content: 'The ROI is insane. They built funnels, products, and systems that generate passive income. I focus on coaching, they handle the business.',
+      name: 'James Wilson',
+      role: 'Freelance Writer',
+      content: 'From side hustle to steady income in 6 weeks. The AI tools handle invoicing, scheduling, and follow-ups so I can focus on writing. Making $700-900 monthly now and growing!',
       rating: 5,
-      revenue: '+$720K',
-    },
-    {
-      name: 'Jessica Thompson',
-      role: 'Fashion Creator',
-      content: 'Finally, a team that gets creators. No hand-holding needed, they just execute. My community loves the products they developed.',
-      rating: 5,
-      revenue: '+$425K',
+      revenue: '$800/mo',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=James',
     },
   ];
 
@@ -72,10 +69,10 @@ export default function Testimonials() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Creator Success Stories
+            Real Beginner Success Stories
           </h2>
           <p className="text-xl text-lightGray max-w-2xl mx-auto">
-            Real results from creators who trusted us with their business
+            See how people just like you are building steady income streams
           </p>
         </motion.div>
 
@@ -138,12 +135,22 @@ export default function Testimonials() {
                 </blockquote>
 
                 <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-xl font-bold text-white">
-                      {testimonials[currentIndex].name}
-                    </div>
-                    <div className="text-lightGray">
-                      {testimonials[currentIndex].role}
+                  <div className="flex items-center gap-4">
+                    <motion.img
+                      src={testimonials[currentIndex].avatar}
+                      alt={testimonials[currentIndex].name}
+                      className="w-16 h-16 rounded-full bg-white/10"
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.2, type: "spring" }}
+                    />
+                    <div>
+                      <div className="text-xl font-bold text-white">
+                        {testimonials[currentIndex].name}
+                      </div>
+                      <div className="text-lightGray">
+                        {testimonials[currentIndex].role}
+                      </div>
                     </div>
                   </div>
 
@@ -151,7 +158,7 @@ export default function Testimonials() {
                     <div className="text-2xl font-bold text-primary">
                       {testimonials[currentIndex].revenue}
                     </div>
-                    <div className="text-xs text-lightGray">Revenue Generated</div>
+                    <div className="text-xs text-lightGray">Monthly Income</div>
                   </div>
                 </div>
               </div>
@@ -202,8 +209,8 @@ export default function Testimonials() {
           {[
             { value: '98%', label: 'Success Rate' },
             { value: '4.9/5', label: 'Client Rating' },
-            { value: '$38M+', label: 'Revenue Generated' },
-            { value: '200+', label: 'Happy Creators' },
+            { value: '$1.2M+', label: 'Income Created' },
+            { value: '150+', label: 'Happy Clients' },
           ].map((stat, index) => (
             <motion.div
               key={index}

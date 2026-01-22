@@ -83,10 +83,10 @@ export default function CTA() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Let's talk about your next big move
+            Ready to start your income journey?
           </h2>
           <p className="text-xl text-lightGray max-w-2xl mx-auto">
-            Ready to scale your creator business? Book a free consultation and let's build something amazing together.
+            Book a free consultation and we'll show you exactly how to turn your skills into steady income—even if you're just starting out.
           </p>
         </motion.div>
 
@@ -185,7 +185,7 @@ export default function CTA() {
 
                 <div>
                   <label htmlFor="message" className="block text-white font-semibold mb-2">
-                    Tell us about your goals
+                    What skills do you want to monetize?
                   </label>
                   <textarea
                     id="message"
@@ -195,7 +195,7 @@ export default function CTA() {
                     required
                     rows={4}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-lightGray focus:outline-none focus:border-primary transition-colors resize-none"
-                    placeholder="What would you like to achieve with your creator business?"
+                    placeholder="Tell us about your skills and what kind of income you'd like to create..."
                   />
                 </div>
 
@@ -223,10 +223,10 @@ export default function CTA() {
                   <CheckCircle2 className="w-20 h-20 text-primary mx-auto mb-6" />
                 </motion.div>
                 <h3 className="text-3xl font-bold text-white mb-4">
-                  Message Sent!
+                  Thanks for reaching out!
                 </h3>
                 <p className="text-lightGray text-lg">
-                  We'll get back to you within 24 hours.
+                  We'll get back to you within 24 hours with a personalized plan for your success.
                 </p>
               </motion.div>
             )}

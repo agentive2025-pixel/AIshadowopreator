@@ -11,40 +11,40 @@ export default function Process() {
     {
       icon: Search,
       number: '01',
-      title: 'Discovery & Strategy',
-      description: 'We analyze your audience and create a custom monetization plan',
-      code: `// Analyze audience data
-const insights = await analyze({
-  engagement: true,
-  demographics: true,
-  interests: true
-});`,
+      title: 'Discover Your Path',
+      description: 'We help you identify the best way to monetize your skills—no guessing',
+      code: `// Find your niche
+const yourPath = {
+  skills: ['your talents'],
+  market: 'ready buyers',
+  income: '$500-2000/mo'
+};`,
       color: 'from-primary to-purple-600',
     },
     {
       icon: Wrench,
       number: '02',
-      title: 'Build & Test',
-      description: 'We develop your digital products and systems while you focus on content',
-      code: `// Build product ecosystem
-const product = await build({
-  type: 'digital',
-  scalable: true,
-  automated: true
-});`,
+      title: 'Set Up Your System',
+      description: 'We build and configure all the automation tools you need—done for you',
+      code: `// Setup automation
+const tools = {
+  scheduling: 'auto',
+  invoicing: 'auto',
+  followUps: 'auto'
+};`,
       color: 'from-secondary to-blue-600',
     },
     {
       icon: Rocket,
       number: '03',
-      title: 'Launch & Scale',
-      description: 'We manage everything end-to-end so you keep creating',
-      code: `// Launch and optimize
-await launch({
-  marketing: true,
-  analytics: true,
-  optimization: true
-});`,
+      title: 'Start Earning',
+      description: 'Get your first clients with our proven strategies and ongoing support',
+      code: `// Launch & grow
+const results = {
+  week1: 'first client',
+  month1: '$500-1000',
+  month3: '$1500+ steady'
+};`,
       color: 'from-primary to-pink-600',
     },
   ];
@@ -59,10 +59,10 @@ await launch({
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            We Build. You Profit.
+            Your Path to Income in 3 Simple Steps
           </h2>
           <p className="text-xl text-lightGray max-w-2xl mx-auto">
-            A simple, powerful way to monetize your influence
+            A clear roadmap from complete beginner to earning your first income
           </p>
         </motion.div>
 
@@ -189,8 +189,8 @@ await launch({
           className="text-center mt-16"
         >
           <p className="text-lightGray text-lg">
-            From concept to cash flow in{' '}
-            <span className="text-primary font-bold">4-6 weeks</span>
+            Most beginners see their first income within{' '}
+            <span className="text-primary font-bold">2-4 weeks</span>
           </p>
         </motion.div>
       </div>
