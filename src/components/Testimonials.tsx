@@ -12,34 +12,30 @@ export default function Testimonials() {
     {
       name: 'Sarah Martinez',
       role: 'Virtual Assistant',
-      content: 'I went from $0 to $1,200/month in just 3 months! The automation tools they set up help me manage 5 clients without feeling overwhelmed. Finally making real money doing what I love.',
+      content: 'I went from $0 to $2,500/month in just 3 months! The automation tools they set up help me manage 5 clients without feeling overwhelmed. Finally making real money doing what I love.',
       rating: 5,
-      revenue: '$1.2K/mo',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah',
+      revenue: '$2.5K/mo',
     },
     {
       name: 'Michael Chen',
       role: 'Graphic Designer',
-      content: 'As a complete beginner, I was nervous about starting my own business. AI Operator made it so simple—I got my first paying client within 2 weeks and now consistently earn $800-1000/month.',
+      content: 'As a complete beginner, I was nervous about starting my own business. AI Operator made it so simple—I got my first paying client within 2 weeks and now consistently earn $2,000-2,500/month.',
       rating: 5,
-      revenue: '$900/mo',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Michael',
+      revenue: '$2.2K/mo',
     },
     {
       name: 'Emily Rodriguez',
       role: 'Social Media Manager',
-      content: 'The step-by-step guidance was exactly what I needed. I started with zero experience and now have 3 regular clients paying me $500 each. The automation saves me hours every week!',
+      content: 'The step-by-step guidance was exactly what I needed. I started with zero experience and now have 3 regular clients paying me $800 each. The automation saves me hours every week!',
       rating: 5,
-      revenue: '$1.5K/mo',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Emily',
+      revenue: '$2.4K/mo',
     },
     {
       name: 'James Wilson',
       role: 'Freelance Writer',
-      content: 'From side hustle to steady income in 6 weeks. The AI tools handle invoicing, scheduling, and follow-ups so I can focus on writing. Making $700-900 monthly now and growing!',
+      content: 'From side hustle to steady income in 6 weeks. The AI tools handle invoicing, scheduling, and follow-ups so I can focus on writing. Making $2,000+ monthly now and growing!',
       rating: 5,
-      revenue: '$800/mo',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=James',
+      revenue: '$2K/mo',
     },
   ];
 
@@ -136,14 +132,9 @@ export default function Testimonials() {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <motion.img
-                      src={testimonials[currentIndex].avatar}
-                      alt={testimonials[currentIndex].name}
-                      className="w-16 h-16 rounded-full bg-white/10"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.2, type: "spring" }}
-                    />
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-2xl">
+                      {testimonials[currentIndex].name.charAt(0)}
+                    </div>
                     <div>
                       <div className="text-xl font-bold text-white">
                         {testimonials[currentIndex].name}

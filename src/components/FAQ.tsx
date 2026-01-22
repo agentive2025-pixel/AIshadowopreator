@@ -12,36 +12,20 @@ export default function FAQ() {
 
   const faqs: FAQItem[] = [
     {
-      question: "What if I want to stop working together?",
-      answer: "You can stop anytime with 30 days' notice. There are no long-term contracts or penalties. We believe in earning your trust every month, not locking you in."
-    },
-    {
-      question: "How do I know you won't steal my audience?",
-      answer: "You maintain 100% ownership of your brand, audience, and all accounts. We're transparent partners who work behind the scenes—your audience never knows we exist unless you want them to."
-    },
-    {
       question: "What exactly is the revenue share?",
-      answer: "We only make money when you make money. Our typical split is 50/50 on new revenue generated from the products and systems we build. Your existing income streams stay 100% yours."
+      answer: "We only make money when you make money. Our typical revenue share is 20-40% of sales from the products and systems we build together. Your existing income streams stay 100% yours."
     },
     {
       question: "Do I pay anything besides revenue share?",
-      answer: "No upfront costs or monthly fees. We cover all setup costs, tools, and development. You only pay from the profits we help create together."
+      answer: "€0 upfront, €0 monthly fees. We cover all setup costs, tools, and development expenses. You only pay from the profits we help create together."
     },
     {
       question: "How much of my time does this require?",
       answer: "Minimal. We handle 95% of the work. You'll spend about 2-3 hours per month on quick reviews and approvals. We designed this so you can focus on creating content."
     },
     {
-      question: "Do you work with creators in my niche?",
-      answer: "We work with creators across many niches—tech, lifestyle, education, fitness, and more. What matters most is your commitment to growing a sustainable business, not your specific topic."
-    },
-    {
       question: "What types of products do you build?",
       answer: "We create digital products that fit your audience—courses, templates, tools, memberships, or automated services. Everything is customized to what your audience actually needs and will buy."
-    },
-    {
-      question: "Is there a minimum commitment period?",
-      answer: "No minimum commitment. Month-to-month partnership with 30 days' notice to part ways. We're confident in the value we deliver, so we don't need to lock you in."
     },
     {
       question: "What if I'm just starting out?",
@@ -49,15 +33,11 @@ export default function FAQ() {
     },
     {
       question: "How long until I see results?",
-      answer: "Most clients see their first sales within 60-90 days. We focus on quick wins first, then scale up. Every business is different, but we're committed to showing progress fast."
+      answer: "Most clients see their first sales within 14 days to 1 month. We focus on quick wins first, then scale up. Every business is different, but we're committed to showing progress fast."
     },
     {
       question: "What makes you different from other agencies?",
-      answer: "We're not an agency—we're partners. No upfront fees, no complex contracts. We build, manage, and optimize everything while you focus on content. We succeed only when you succeed."
-    },
-    {
-      question: "Can I see examples of your work?",
-      answer: "Yes! We're happy to share case studies and examples during our initial chat. We'll show you exactly how we've helped creators in situations similar to yours."
+      answer: "We're not an agency—we're partners. No upfront fees, no monthly costs. We build, manage, and optimize everything while you focus on content. We succeed only when you succeed."
     }
   ];
 

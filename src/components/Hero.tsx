@@ -88,7 +88,7 @@ export default function Hero() {
             transition={{ delay: 2.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-lightGray mb-12 max-w-3xl mx-auto"
           >
-            Turn your skills into steady income with AI automation. We help beginners and small creators build sustainable online businesses—no tech skills required
+            We're your invisible partner—building systems, creating products, and scaling revenue while you focus on growing your audience
           </motion.p>
 
           <motion.div
