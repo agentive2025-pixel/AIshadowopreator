@@ -22,14 +22,14 @@ export default function AnimatedBackground() {
       opacity: number;
     }> = [];
 
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 200; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 2 + 0.5,
-        speedX: (Math.random() - 0.5) * 0.3,
-        speedY: (Math.random() - 0.5) * 0.3,
-        opacity: Math.random() * 0.5 + 0.2,
+        size: Math.random() * 2.5 + 0.8,
+        speedX: (Math.random() - 0.5) * 0.4,
+        speedY: (Math.random() - 0.5) * 0.4,
+        opacity: Math.random() * 0.6 + 0.3,
       });
     }
 
@@ -44,14 +44,14 @@ export default function AnimatedBackground() {
       progress: number;
     }> = [];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 15; i++) {
       shootingStars.push({
         x: Math.random() * canvas.width + canvas.width * 0.2,
         y: -Math.random() * canvas.height,
-        length: Math.random() * 100 + 50,
-        speed: Math.random() * 3 + 2,
+        length: Math.random() * 180 + 120,
+        speed: Math.random() * 4 + 3,
         opacity: 0,
-        maxOpacity: Math.random() * 0.2 + 0.3,
+        maxOpacity: Math.random() * 0.4 + 0.5,
         delay: Math.random() * 5000,
         progress: 0,
       });
@@ -102,10 +102,11 @@ export default function AnimatedBackground() {
           star.y - star.length * 0.7
         );
         gradient.addColorStop(0, `rgba(255, 255, 255, ${star.opacity})`);
+        gradient.addColorStop(0.5, `rgba(255, 255, 255, ${star.opacity * 0.8})`);
         gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
 
         ctx.strokeStyle = gradient;
-        ctx.lineWidth = 1.5;
+        ctx.lineWidth = 3.5;
         ctx.beginPath();
         ctx.moveTo(star.x, star.y);
         ctx.lineTo(star.x + star.length * 0.7, star.y - star.length * 0.7);

@@ -73,20 +73,84 @@ await launch({
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ y: -10 }}
+              whileHover={{
+                y: -15,
+                scale: 1.03,
+                boxShadow: "0 30px 80px rgba(139, 92, 246, 0.4)",
+              }}
               className="relative group"
             >
               <div className="glass-card rounded-2xl p-8 h-full relative overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                <motion.div
+                  className={`absolute inset-0 bg-gradient-to-br ${step.color}`}
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 0.12 }}
+                  transition={{ duration: 0.4 }}
+                />
+
+                <motion.div
+                  className={`absolute -top-16 -right-16 w-48 h-48 bg-gradient-to-br ${step.color} rounded-full blur-3xl`}
+                  animate={{
+                    scale: [1, 1.4, 1],
+                    rotate: [0, 180, 360],
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.5,
+                  }}
+                  style={{ opacity: 0.15 }}
+                />
 
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-6">
-                    <div className={`p-4 rounded-xl bg-gradient-to-br ${step.color}`}>
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <span className="text-5xl font-bold text-white/10">
+                    <motion.div
+                      whileHover={{
+                        scale: 1.15,
+                        rotate: 360,
+                      }}
+                      animate={{
+                        y: [0, -8, 0],
+                      }}
+                      transition={{
+                        rotate: { duration: 0.6 },
+                        scale: { duration: 0.3 },
+                        y: {
+                          duration: 2.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: index * 0.4,
+                        }
+                      }}
+                      className={`p-4 rounded-xl bg-gradient-to-br ${step.color} relative`}
+                    >
+                      <motion.div
+                        className={`absolute inset-0 rounded-xl bg-gradient-to-br ${step.color}`}
+                        animate={{
+                          opacity: [0.6, 1, 0.6],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
+                      />
+                      <step.icon className="w-8 h-8 text-white relative z-10" />
+                    </motion.div>
+                    <motion.span
+                      className="text-5xl font-bold text-white/10"
+                      animate={{
+                        opacity: [0.1, 0.2, 0.1],
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    >
                       {step.number}
-                    </span>
+                    </motion.span>
                   </div>
 
                   <h3 className="text-2xl font-bold text-white mb-4">

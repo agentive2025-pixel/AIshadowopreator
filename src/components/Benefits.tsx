@@ -70,31 +70,98 @@ export default function Benefits() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ y: -10 }}
+              whileHover={{
+                y: -15,
+                scale: 1.02,
+                rotateZ: 2,
+                boxShadow: "0 30px 80px rgba(139, 92, 246, 0.5)",
+              }}
               className="relative group"
             >
               <div className="glass-card rounded-2xl p-8 h-full relative overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                <motion.div
+                  className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient}`}
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 0.1 }}
+                  transition={{ duration: 0.4 }}
+                />
 
                 <motion.div
                   animate={{
                     rotate: [0, 360],
+                    scale: [1, 1.5, 1],
                   }}
                   transition={{
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear",
+                    rotate: {
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "linear",
+                    },
+                    scale: {
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }
                   }}
                   className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-2xl"
                 />
 
+                <motion.div
+                  animate={{
+                    rotate: [360, 0],
+                    scale: [1, 1.3, 1],
+                  }}
+                  transition={{
+                    rotate: {
+                      duration: 15,
+                      repeat: Infinity,
+                      ease: "linear",
+                    },
+                    scale: {
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1,
+                    }
+                  }}
+                  className={`absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br ${benefit.gradient} rounded-full blur-3xl opacity-10`}
+                />
+
                 <div className="relative z-10">
                   <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.gradient} p-5 mb-6 shadow-lg`}
+                    whileHover={{
+                      scale: 1.2,
+                      rotate: [0, -10, 10, -10, 0],
+                    }}
+                    animate={{
+                      y: [0, -10, 0],
+                      rotate: [0, 5, 0, -5, 0],
+                    }}
+                    transition={{
+                      scale: { type: "spring", stiffness: 300 },
+                      rotate: { type: "spring", stiffness: 300 },
+                      y: {
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: index * 0.4,
+                      }
+                    }}
+                    className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.gradient} p-5 mb-6 shadow-lg relative`}
                   >
-                    <benefit.icon className="w-full h-full text-white" />
+                    <motion.div
+                      className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${benefit.gradient}`}
+                      animate={{
+                        opacity: [0.6, 1, 0.6],
+                        scale: [1, 1.1, 1],
+                      }}
+                      transition={{
+                        duration: 2.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
+                    <benefit.icon className="w-full h-full text-white relative z-10" />
                   </motion.div>
 
                   <h3 className="text-2xl font-bold text-white mb-4">

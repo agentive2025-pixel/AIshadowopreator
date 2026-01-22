@@ -27,28 +27,44 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-dark" />
 
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl opacity-30"
         animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 50, 0],
-          y: [0, 30, 0],
+          scale: [1, 1.4, 1.1, 1],
+          x: [0, 80, -20, 0],
+          y: [0, 50, -30, 0],
+          rotate: [0, 180, 360],
         }}
         transition={{
-          duration: 8,
+          duration: 12,
           repeat: Infinity,
           ease: "easeInOut",
         }}
       />
 
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary rounded-full blur-3xl opacity-10"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary rounded-full blur-3xl opacity-20"
         animate={{
-          scale: [1, 1.3, 1],
-          x: [0, -50, 0],
-          y: [0, -30, 0],
+          scale: [1, 1.5, 1.2, 1],
+          x: [0, -80, 30, 0],
+          y: [0, -50, 20, 0],
+          rotate: [0, -180, -360],
         }}
         transition={{
-          duration: 10,
+          duration: 14,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      <motion.div
+        className="absolute top-1/2 left-1/2 w-72 h-72 bg-pink-500 rounded-full blur-3xl opacity-15"
+        animate={{
+          scale: [1, 1.6, 0.9, 1],
+          x: [-100, 100, -50, -100],
+          y: [-50, 50, -100, -50],
+        }}
+        transition={{
+          duration: 16,
           repeat: Infinity,
           ease: "easeInOut",
         }}
@@ -113,11 +129,40 @@ export default function Hero() {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -5 }}
-                className="glass-card rounded-xl p-6"
+                whileHover={{
+                  y: -10,
+                  scale: 1.05,
+                  boxShadow: "0 20px 60px rgba(139, 92, 246, 0.3)",
+                }}
+                animate={{
+                  y: [0, -5, 0],
+                }}
+                transition={{
+                  y: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.3,
+                  }
+                }}
+                className="glass-card rounded-xl p-6 relative overflow-hidden"
               >
-                <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-lightGray">{stat.label}</div>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"
+                  animate={{
+                    opacity: [0.1, 0.3, 0.1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.2,
+                  }}
+                />
+                <div className="relative z-10">
+                  <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-lightGray">{stat.label}</div>
+                </div>
               </motion.div>
             ))}
           </motion.div>

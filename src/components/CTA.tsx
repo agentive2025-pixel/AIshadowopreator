@@ -33,28 +33,46 @@ export default function CTA() {
 
       <motion.div
         animate={{
-          scale: [1, 1.2, 1],
+          scale: [1, 1.4, 1.1, 1],
           rotate: [0, 180, 360],
+          x: [0, 50, -30, 0],
+          y: [0, -30, 20, 0],
         }}
         transition={{
           duration: 20,
           repeat: Infinity,
-          ease: "linear",
+          ease: "easeInOut",
         }}
         className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
       />
 
       <motion.div
         animate={{
-          scale: [1, 1.3, 1],
+          scale: [1, 1.5, 1.2, 1],
           rotate: [360, 180, 0],
+          x: [0, -50, 30, 0],
+          y: [0, 30, -20, 0],
         }}
         transition={{
           duration: 15,
           repeat: Infinity,
-          ease: "linear",
+          ease: "easeInOut",
         }}
         className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"
+      />
+
+      <motion.div
+        animate={{
+          scale: [1, 1.6, 0.9, 1],
+          rotate: [0, 360],
+          x: [0, 100, -100, 0],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/2 left-1/2 w-72 h-72 bg-pink-500/15 rounded-full blur-3xl"
       />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -78,7 +96,37 @@ export default function CTA() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-2xl mx-auto"
         >
-          <div className="glass-card rounded-3xl p-8 md:p-12">
+          <motion.div
+            className="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden"
+            whileHover={{
+              boxShadow: "0 30px 90px rgba(139, 92, 246, 0.4)",
+            }}
+          >
+            <motion.div
+              className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"
+              animate={{
+                scale: [1, 1.4, 1],
+                rotate: [0, 360],
+              }}
+              transition={{
+                duration: 12,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-br from-secondary/15 to-transparent rounded-full blur-3xl"
+              animate={{
+                scale: [1, 1.5, 1],
+                rotate: [360, 0],
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <div className="relative z-10">
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -182,7 +230,8 @@ export default function CTA() {
                 </p>
               </motion.div>
             )}
-          </div>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}

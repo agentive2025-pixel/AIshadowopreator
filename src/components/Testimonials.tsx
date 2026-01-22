@@ -83,18 +83,53 @@ export default function Testimonials() {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, x: 100, scale: 0.95 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: -100, scale: 0.95 }}
+              transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
               className="glass-card rounded-3xl p-12 relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl" />
+              <motion.div
+                className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 180, 360],
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+
+              <motion.div
+                className="absolute bottom-0 left-0 w-56 h-56 bg-gradient-to-br from-secondary/15 to-transparent rounded-full blur-3xl"
+                animate={{
+                  scale: [1, 1.4, 1],
+                  rotate: [360, 180, 0],
+                }}
+                transition={{
+                  duration: 10,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
 
               <div className="relative z-10">
                 <div className="flex items-center gap-1 mb-6">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-primary text-primary" />
+                    <motion.div
+                      key={i}
+                      initial={{ scale: 0, rotate: -180 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      transition={{
+                        delay: i * 0.1,
+                        type: "spring",
+                        stiffness: 200,
+                      }}
+                    >
+                      <Star className="w-6 h-6 fill-primary text-primary" />
+                    </motion.div>
                   ))}
                 </div>
 
@@ -175,10 +210,35 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.8 + index * 0.1 }}
-              className="text-center"
+              whileHover={{
+                scale: 1.1,
+                y: -5,
+              }}
+              className="text-center relative group"
             >
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-sm text-lightGray">{stat.label}</div>
+              <motion.div
+                className="absolute inset-0 bg-primary/10 rounded-lg blur-xl"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <div className="relative z-10">
+                <motion.div
+                  className="text-3xl font-bold text-white mb-2"
+                  animate={{
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.3,
+                  }}
+                >
+                  {stat.value}
+                </motion.div>
+                <div className="text-sm text-lightGray">{stat.label}</div>
+              </div>
             </motion.div>
           ))}
         </motion.div>

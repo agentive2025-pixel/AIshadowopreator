@@ -82,21 +82,79 @@ export default function Services() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.15 }}
-              whileHover={{ scale: 1.02, y: -5 }}
+              whileHover={{
+                scale: 1.03,
+                y: -10,
+                rotateY: 5,
+                boxShadow: "0 25px 70px rgba(139, 92, 246, 0.4)",
+              }}
               className="group relative"
+              style={{ perspective: "1000px" }}
             >
               <div className="glass-card rounded-2xl p-8 h-full relative overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                <motion.div
+                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient}`}
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 0.15 }}
+                  transition={{ duration: 0.4 }}
+                />
 
-                <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+                <motion.div
+                  className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl"
+                  animate={{
+                    scale: [1, 1.3, 1],
+                    rotate: [0, 180, 360],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+
+                <motion.div
+                  className={`absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-br ${service.gradient} rounded-full blur-2xl opacity-20`}
+                  animate={{
+                    scale: [1, 1.4, 1],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.5,
+                  }}
+                />
 
                 <div className="relative z-10">
                   <motion.div
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} p-4 mb-6 shadow-glow-purple`}
+                    whileHover={{ rotate: 360, scale: 1.2 }}
+                    animate={{
+                      y: [0, -8, 0],
+                    }}
+                    transition={{
+                      rotate: { duration: 0.6 },
+                      scale: { duration: 0.3 },
+                      y: {
+                        duration: 2.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: index * 0.3,
+                      }
+                    }}
+                    className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} p-4 mb-6 shadow-glow-purple relative`}
                   >
-                    <service.icon className="w-full h-full text-white" />
+                    <motion.div
+                      className={`absolute inset-0 rounded-xl bg-gradient-to-br ${service.gradient}`}
+                      animate={{
+                        opacity: [0.5, 1, 0.5],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
+                    <service.icon className="w-full h-full text-white relative z-10" />
                   </motion.div>
 
                   <h3 className="text-2xl font-bold text-white mb-3">
