@@ -35,7 +35,7 @@ export default function Benefits() {
     {
       icon: Handshake,
       title: 'Revenue-Share Model',
-      description: 'Pay only 20-40% of sales—€0 upfront, €0 monthly',
+      description: 'Pay only 20-40% of sales—$0 upfront, $0 monthly',
       details: [
         'No upfront costs',
         'No monthly fees',

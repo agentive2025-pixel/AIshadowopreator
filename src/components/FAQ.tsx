@@ -17,7 +17,7 @@ export default function FAQ() {
     },
     {
       question: "Do I pay anything besides revenue share?",
-      answer: "€0 upfront, €0 monthly fees. We cover all setup costs, tools, and development expenses. You only pay from the profits we help create together."
+      answer: "$0 upfront, $0 monthly fees. We cover all setup costs, tools, and development expenses. You only pay from the profits we help create together."
     },
     {
       question: "How much of my time does this require?",
