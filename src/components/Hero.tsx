@@ -97,14 +97,17 @@ export default function Hero() {
             transition={{ delay: 3, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <motion.button
+            <motion.a
+              href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%2C%20I%27m%20interested%20in%20learning%20more"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg shadow-glow-purple hover:shadow-glow-purple transition-all duration-300 flex items-center gap-2 group"
             >
-              Start Chat
+              Get in Touch
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </motion.a>
 
             <motion.button
               whileHover={{ scale: 1.05 }}

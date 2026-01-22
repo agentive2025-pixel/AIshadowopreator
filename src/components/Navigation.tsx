@@ -60,15 +60,18 @@ export default function Navigation() {
               </motion.a>
             ))}
 
-            <motion.button
+            <motion.a
+              href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%2C%20I%27m%20interested%20in%20learning%20more"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-2 bg-primary text-white rounded-lg font-semibold shadow-glow-purple hover:shadow-glow-purple transition-all duration-300"
             >
-              Start Chat
-            </motion.button>
+              Get in Touch
+            </motion.a>
           </div>
 
           <button
@@ -98,9 +101,14 @@ export default function Navigation() {
                 {link.name}
               </a>
             ))}
-            <button className="w-full px-6 py-3 bg-primary text-white rounded-lg font-semibold">
-              Start Chat
-            </button>
+            <a
+              href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%2C%20I%27m%20interested%20in%20learning%20more"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full px-6 py-3 bg-primary text-white rounded-lg font-semibold text-center"
+            >
+              Get in Touch
+            </a>
           </div>
         </motion.div>
       )}

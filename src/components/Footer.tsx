@@ -28,7 +28,7 @@ export default function Footer() {
               <h3 className="text-3xl font-bold text-white">AI Operator</h3>
             </motion.div>
             <p className="text-lightGray mb-6 leading-relaxed">
-              We build and manage complete digital product ecosystems for creators—so you can focus on your content while we handle the business.
+              Helping beginners turn their skills into steady income with AI automation. Simple, supportive, and proven to work.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social, index) => (
