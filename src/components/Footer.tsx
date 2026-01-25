@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Twitter, Linkedin, Instagram, Youtube, Mail } from 'lucide-react';
+import { Twitter, Linkedin, Instagram, Youtube, Mail, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   const footerLinks = {
@@ -10,6 +10,7 @@ export default function Footer() {
   };
 
   const socialLinks = [
+    { icon: MessageCircle, href: 'https://wa.me/201020146311?text=Hi%20REVENUE%20Share%20from%20aioperator.com', label: 'WhatsApp', external: true },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Instagram, href: '#', label: 'Instagram' },
@@ -35,6 +36,8 @@ export default function Footer() {
                 <motion.a
                   key={index}
                   href={social.href}
+                  target={(social as any).external ? '_blank' : undefined}
+                  rel={(social as any).external ? 'noopener noreferrer' : undefined}
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                   className="w-10 h-10 glass-card rounded-full flex items-center justify-center text-lightGray hover:text-primary hover:bg-primary/10 transition-colors"

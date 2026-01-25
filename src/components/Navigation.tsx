@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,13 +39,15 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-bold text-white flex items-center"
-          >
-            AI <span className="relative inline-flex items-center justify-center w-7 h-7 mx-0.5 rounded-full border border-[#FF6B6B] before:content-[''] before:absolute before:w-px before:h-3 before:bg-[#FF6B6B] before:top-0 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1">O</span>perator
-          </motion.div>
+          <Link to="/">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-2xl font-bold text-white flex items-center cursor-pointer"
+            >
+              AI <span className="relative inline-flex items-center justify-center w-7 h-7 mx-0.5 rounded-full border border-[#FF6B6B] before:content-[''] before:absolute before:w-px before:h-3 before:bg-[#FF6B6B] before:top-0 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1">O</span>perator
+            </motion.div>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
@@ -62,16 +65,17 @@ export default function Navigation() {
             ))}
 
             <motion.a
-              href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%2C%20I%27m%20interested%20in%20learning%20more"
+              href="https://wa.me/201020146311?text=Hi%20REVENUE%20Share%20from%20aioperator.com"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-primary text-white rounded-lg font-semibold shadow-glow-purple hover:shadow-glow-purple transition-all duration-300"
+              className="px-6 py-2 bg-primary text-white rounded-lg font-semibold shadow-glow-purple hover:shadow-glow-purple transition-all duration-300 flex items-center gap-2"
             >
-              Get in Touch
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp
             </motion.a>
           </div>
 
@@ -103,12 +107,13 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%2C%20I%27m%20interested%20in%20learning%20more"
+              href="https://wa.me/201020146311?text=Hi%20REVENUE%20Share%20from%20aioperator.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full px-6 py-3 bg-primary text-white rounded-lg font-semibold text-center"
+              className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-primary text-white rounded-lg font-semibold text-center"
             >
-              Get in Touch
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp
             </a>
           </div>
         </motion.div>
